@@ -1,0 +1,165 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header{
+	background-image: url("../images/dumbo.jpg");
+	width:100%;
+	height:415px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	clear: both;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.row{
+    background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo {
+  padding: 10px 20px;
+  float: left;
+}
+
+
+.nav-container {
+  width: 50%;
+  float: right;
+}
+
+.nav-links {
+  width: 100%;
+  float: right;
+}
+
+li {
+	 padding: 20px 10px;
+	 float: right;
+	 width: 20%;
+     display: block;
+     text-align:center;
+}
+
+a.nav:link,
+a.nav:visited{
+	color: white;
+	text-decoration: none;
+}
+a.nav:hover{
+	color:#0076BC
+}
+.active{
+	background-color:gray;
+}
+
+a.logo:link,
+a.logo:visited {
+	color: white;
+	text-decoration: none;
+}
+.bignav{
+	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+	font-weight: 700;
+	text-transform:uppercase;
+}
+h1{
+	font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+	font-size:36px;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	padding: 150px;
+	width: 100%;
+}
+
+.icon{
+	float:left;
+	padding:0px 20px ;
+	height: 300px;
+}
+
+h2{
+  font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform:uppercase;
+  float:left;
+  color:#a4a4a4;
+}
+
+
+
+p{
+    font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+	font-size:16px;
+	font-weight: 300;
+	line-height: 22px;
+	color:#a4a4a4;
+}
+
+
+
+
+.bottom{
+	background-color:white;
+	overflow: hidden;
+	padding: 30px 0px;
+}
+
+.box .inner-wrapper{ 
+	width: 100%;
+	height:100%;
+}
+
+
+.leftcol, .middlecol{
+	height:300px;
+	width:33.3%;
+	float:left;
+	margin: 20px 0px;
+	padding-right: 20px;
+}
+
+.rightcol{
+	float:right;
+	height:300px;
+	width:33.3%;
+	margin: 20px 0px;
+}
+
+.portfolio{
+	padding:15px;
+}
