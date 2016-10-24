@@ -1,7 +1,6 @@
 /******************************************
 /* SETUP
 /*******************************************/
-@import "compass/css3"
 
 /* Box Model */
 * {
@@ -63,7 +62,12 @@ header{
 	width:100%;
 	height:100px;
 	background-color: white;
-	clear: both;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	border-bottom: 1px solid #4a4a4a;
+	position:fixed;
+	overflow:hidden;
 }
 
 .row{
@@ -82,17 +86,16 @@ header{
 .nav-container {
   width: 50%;
   float: right;
+  overflow: hidden;
 }
 
 .nav-links {
-  width: 100%;
   float: right;
 }
 
 li {
-	 padding: 20px 10px;
+	 padding: 20px 30px;
 	 float: right;
-	 width: 20%;
      display: block;
      text-align:center;
 }
@@ -109,10 +112,16 @@ a.nav:hover{
 	background-color:gray;
 }
 
-a.logo:link,
-a.logo:visited {
-	color: white;
+a.navworks:link,
+a.navworks:visited{
+	color: black;
 	text-decoration: none;
+}
+a.navworks:hover{
+	color:#0076BC
+}
+.active{
+	background-color:gray;
 }
 .bignav{
 	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
@@ -125,8 +134,9 @@ h1{
 	font-weight: 300;
 	color: white;
 	text-align: center;
-	padding: 150px;
-	width: 100%;
+	padding: 150px 0px;
+	width: 50%;
+	margin: 0px auto;
 }
 
 .icon{
@@ -140,7 +150,6 @@ h2{
   font-weight: 300;
   font-size: 24px;
   text-transform:uppercase;
-  float:left;
   color:#a4a4a4;
 }
 
@@ -170,6 +179,7 @@ p{
 
 .inner-wrapper { 
 	position: relative; 
+	z-index: 1;
 }
 
 .leftcol, .middlecol{
@@ -203,57 +213,36 @@ p{
 }
 
 /******************************************
-/* PORTFOLIO ITEM
+/* PORTFOLIO ITEM DETAIL PAGE
 /*******************************************/
-
-
-$pad: 20px;
-
-.grid {
-  background: white;
-  margin: 0 0 $pad 0;
-  
-  &:after {
-    /* Or @extend clearfix */
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-[class*='col-'] {
-   float: left;
-   padding-right: $pad;
-   .grid &:last-of-type {
-  	padding-right: 0;
-  }
-}
-.col-2-3 {
+.two-thirds{
 	width: 66.66%;
+	float: left;
+	margin: 30px 0px;
+	padding-left:20px;
 }
-.col-1-3 {
+.one-third{
 	width: 33.33%;
-}
-.col-1-2 {
-	width: 50%;
-}
-.col-1-4 {
-	width: 25%;
-}
-.col-1-8 {
-	width: 12.5%;
+	float: left;
+	margin: 30px 0px;
 }
 
-.module {
-  padding: $pad;
-  background: #eee;
+.portfolioImg{
+	margin-bottom:30px;
+	size: 100%;
 }
 
-/* Opt-in outside padding */
-.grid-pad {
-  padding: $pad 0 $pad $pad;
-  [class*='col-']:last-of-type {
-    padding-right: $pad;
-  }
+.project-title{
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+  color:#4a4a4a;
+  margin-bottom:20px;
+}
+
+.project-description{
+	margin-right:40px;
+	color:#4a4a4a;
+	line-height:1.5;
 }
 
