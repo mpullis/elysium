@@ -202,6 +202,7 @@ p{
 .footer{
 	background-color: #333;
 	height: 80px;
+	clear:both;
 }
 .copyright{
 	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
@@ -244,5 +245,36 @@ p{
 	margin-right:40px;
 	color:#4a4a4a;
 	line-height:1.5;
+}
+
+.project_nav{
+	clear:both;
+	color:#e6e6e6;
+	border:1px solid #979797;
+	height:88px;
+}
+
+
+a.portfolio_link:link,
+a.portfolio_link:visited,
+a.next:link,
+a.next:visited,
+a.prev:link,
+a.prev:visited{
+	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+	font-size:16px;
+	font-weight: 400;
+	color:#a4a4a4;
+	text-decoration: none;
+	padding:34px 0px;
+}
+a.portfolio_link{
+	text-align: center;
+}
+a.prev{
+	text-align: left;
+}
+a.prev{
+	text-align: right;
 }
 
