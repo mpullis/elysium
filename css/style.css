@@ -23,7 +23,7 @@
 /*******************************************/
 
 body {
-
+  background-color:white;
 }
 
 /******************************************
@@ -33,9 +33,14 @@ body {
 header{
    
 }
-
+.footer{
+	background-color: #333;
+	height: 80px;
+	clear:both;
+	margin-top: 30px;
+}
 /******************************************
-/* ADDITIONAL STYLES
+/* HOME
 /*******************************************/
 .home_header{
 	position: relative;
@@ -64,7 +69,13 @@ header{
     background: rgba(39,62,84,0.82);
     overflow: hidden;
     height: 100%;
+    width: 100%;
+    background-color: white;
     z-index: 2;
+}
+
+.row-home {
+  padding-top: 30px;
 }
 
 .logo {
@@ -96,10 +107,7 @@ a.nav:visited{
 	text-decoration: none;
 }
 a.nav:hover{
-	color:#0076BC
-}
-.active{
-	background-color:gray;
+	color:#0076BC;
 }
 
 a.navworks:link,
@@ -108,11 +116,10 @@ a.navworks:visited{
 	text-decoration: none;
 }
 a.navworks:hover{
-	color:#0076BC
+	color:#0076BC;
 }
-.active{
-	background-color:gray;
-}
+
+
 .bignav{
 	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 	font-weight: 700;
@@ -132,7 +139,11 @@ h1{
 .icon{
 	float:left;
 	padding:0px 20px ;
-	height: 200px;
+	width:70px;
+}
+.info{
+	float:left;
+	width:100%;
 }
 
 h2{
@@ -143,8 +154,6 @@ h2{
   color:#a4a4a4;
 }
 
-
-
 p{
     font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 	font-size:16px;
@@ -152,45 +161,69 @@ p{
 	line-height: 22px;
 	color:#a4a4a4;
 }
-
-.bottom{
-	background-color:white;
-	overflow: hidden;
-	padding: 30px 0px;
+/******************************************
+/* WORKS PAGE
+/*******************************************/
+.sub-nav-links {
+  float: left;
+  padding: 20px 0px 10px 30px;
 }
 
-.box .inner-wrapper{ 
-	width: 100%;
+li.smallnav {
+	 padding: 0px 10px;
+	 float: left;
+     display: block;
+     text-align:center;
+}
+.smallnav{
+	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+	font-weight: 400;
+	text-transform:uppercase;
+	font-size: 14px;
+}
+a.smallnav:link,
+a.smallnav:visited{
+	color: #4a4a4a;
+	text-decoration: none;
+}
+a.smallnav:hover{
+	color:#0076BC;
+}
+
+/*this is not working for some reason...*/
+a.active:link{
+	color:#0076BC;
+}
+
+.box{
+	width:33.33%;
+	float:left;	
+	padding: 0 20px;
+}
+.box-left{
+  padding-right:0;
+}
+.box-right{
+  padding-left:0;
+}
+
+.inner-wrapper{
+	width:100%;
 	height:100%;
 }
-
-.inner-wrapper { 
+.header-inner-wrapper { 
 	position: relative; 
 	z-index: 1;
 }
 
-.leftcol, .middlecol{
-	width:33.3%;
-	float:left;
-	margin: 20px 0px;
-	padding-right: 20px;
-}
-
-.rightcol{
-	float:right;
-	width:33.3%;
-	margin: 20px 0px;
-}
-
-.portfolio{
+.portfolio-thumb{
 	padding:15px;
+	float:left;
+	width:100%;
+	height:100%;
 }
 
-.footer{
-	background-color: #333;
-	height: 80px;
-	clear:both;
-}
+
 .copyright{
 	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 	font-size:12px;
@@ -220,20 +253,15 @@ p{
 	float: left;
 	margin: 80px 0px;
 	padding-left:20px;
-	display:inline;
 }
 .one-third{
 	width: 33.33%;
 	float: left;
 	margin: 80px 0px;
 	position:fixed;
-	display:inline;
+	right:0;
 }
 
-.portfolioImg{
-	margin-bottom:30px;
-	size: 100%;
-}
 
 .project-title{
   font-weight: 400;
