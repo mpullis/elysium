@@ -5,9 +5,10 @@ $("li.smallnav").on("click",function(){
 //set it to the var data-filter
  	filter = $(this).attr("data-filter");
  	console.log(filter);
- 	//hide all image divs 
-    //show all image divs with the class small-nav and the attr data-filter=== the var data-filter
- 	$("img.portfolio-thumb").hide();
- 	$("img."+filter).show();
+ 	//hide all box divs 
+    //show all box divs with the attr data-filter=== the var data-filter
+ 	$(".box").hide();
+ 	$(".box."+filter).show();
+ 	//set the menu item to selected	
 });
 
