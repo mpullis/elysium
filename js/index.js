@@ -6,9 +6,13 @@ $("li.smallnav").on("click",function(){
  	filter = $(this).attr("data-filter");
  	console.log(filter);
  	//hide all box divs 
-    //show all box divs with the attr data-filter=== the var data-filter
  	$(".box").hide();
+ 	//show all box divs with the attr data-filter=== the var data-filter
  	$(".box."+filter).show();
  	//set the menu item to selected	
 });
 
+$(document).ready(function(){ 
+	$(".inner-wrapper::after").hide();
+	console.log("ready");
+}) 

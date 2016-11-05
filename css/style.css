@@ -222,10 +222,21 @@ a.active:link{
 }
 
 .inner-wrapper{
+	position:relative;
 	width:100%;
 	height:100%;
 	border: 1px solid #ccc;
 }
+.inner-wrapper::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-color: rgba(0,0,0,0.8); 
+        content: "";
+ }
 .header-inner-wrapper { 
 	position: relative; 
 	z-index: 1;
@@ -236,10 +247,19 @@ a.active:link{
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+	position:relative;
 	/*width:100%;
 	height:100%;*/
 }
 
+h3{
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+	font-size:18px;
+	font-weight: 500;
+	line-height: 18px;
+	color:red;
+	z-index: 10;
+}
 
 .copyright{
 	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
