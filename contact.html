@@ -27,16 +27,24 @@
 	</div>
 	</header>
 		<div class="box-contact">
-				<div>
-					<h2>Contact</h2>
-					<p></BR></BR>Please get in touch if you are interested in working with me or of you would just like to say hi.
+				<div class="inner-wrapper-contact">
+					<h3>Contact</h3>
+					<p>Please get in touch if you are interested in working with me or of you would just like to say hi.
 					</p>
-					<hr>
+				
+					<form action="contact.php" method="POST">
+					  <label for="name">Your Name (required)</label>
+					  <input type="text" id="name" name="name">
+					  <label for="email">Your Email (required)</label>
+					  <input type="text" id="email" name="email">
+	 				  <label for="message">Your Message</label>
+					  <textarea name="message"></textarea>
+					  <input type="button" value="SEND MESSAGE">
+					</form>
 				</div>
-	
 		</div>
 		<div class="box-contact">
-				<div>
+				<div class="inner-wrapper-contact">
 					<iframe width="450" height="190" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=13&center=40.7032%2C-73.9849&key=AIzaSyB5-vkZlLDgpiq9gdCJCdfBmL0yer8QNuA" allowfullscreen></iframe>
 				</div>
 		</div>
