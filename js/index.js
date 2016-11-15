@@ -44,6 +44,10 @@ $( document ).ready(function() {
 	}
 });
 
+function hideBoxes(){
+	
+}
+
 function slideBoxUp (boxIndex) {
 	console.log(boxIndex);
 	setTimeout(function(){
