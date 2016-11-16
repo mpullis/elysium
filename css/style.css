@@ -372,6 +372,14 @@ h4{
 	position:fixed;
 	right:0;
 }
+@media only screen and (max-width: 767px){
+  .two-thirds{
+  	width: 90%;
+  }
+  .one-third{
+  	width: 90%;
+  }
+}
 
 h3{
   font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
@@ -571,6 +579,14 @@ a.contact:visited{
  	padding-left:30px;
  }
 
+@media only screen and (max-width: 767px){
+  .biopage{
+  	border:none;
+  }
+  .biopageright{
+  	padding-left:10px;
+  }
+}
 
 .quote{
     font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
