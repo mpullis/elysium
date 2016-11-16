@@ -1,23 +1,27 @@
 //set data-filter to "all"
 var filter = "all";
+var boxes = $(".box");
+var boxesFiltered = $(".box."+filter);
+var boxNum = 1;
+
 //on click a li in the class small nav, get the attribute data-filter 
-$("li.smallnav").on("click",function(){
+$("li.smallnav").on("click",function(event){
+	event.preventDefault();
 //set it to the var data-filter
  	filter = $(this).attr("data-filter");
+	boxesFiltered = $(".box."+filter);
  	console.log(filter);
  	//hide all box divs 
- 	$(".box").hide();
+ 	hideBoxes();
+ 	setTimeout(showFiltered, 400);
+
  	//show all box divs with the attr data-filter=== the var data-filter
- 	$(".box."+filter).show();
  	//set the menu item to selected	
 });
 
-var boxes = ["box1","box2","box3","box4","box5","box6","box7","box8","box9"];
-
-var boxNum = 1;
+// var boxes = ["box1","box2","box3","box4","box5","box6","box7","box8","box9"];
 
 $(".box").hover(
-
 	function(){
 		id = $(this).attr("id");
  	    console.log(id);
@@ -39,24 +43,39 @@ $(".box").hover(
 
 //when the document is ready animate the margin-top back to 0
 $( document ).ready(function() {
-	for (var i=0;i<9;i++) {
-	  slideBoxUp(i);
-	}
+	showAllBoxes(boxes);
 });
 
-function hideBoxes(){
-	
+function showAllBoxes(boxesArr){
+	for (var i=0;i<boxesArr.length;i++) {
+	  slideBoxUp(boxesArr,i);
+	}
 }
 
-function slideBoxUp (boxIndex) {
+function hideBoxes(){
+	$(".box").css("margin-top",150);
+	$(".box").css("display","none");
+	$(".box").animate({
+ 		"opacity": 0,
+ 	});
+}
+
+function slideBoxUp (boxesArr,boxIndex) {
 	console.log(boxIndex);
 	setTimeout(function(){
-	    $("#"+boxes[boxIndex]).animate({
+	    $(boxesArr[boxIndex]).animate({
 	    	"margin-top":0,
 	    	"opacity": 1
 	    },500, "swing");
   },(200*boxIndex));
 };
 
-
+function showFiltered(){
+	$(".box."+filter).css("display","block");
+	showAllBoxes(boxesFiltered);
+	 // 	$(".box."+filter).animate({
+	 //    	"margin-top":0,
+	 //    	"opacity": 1
+	 // });
+}
 
