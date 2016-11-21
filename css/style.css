@@ -31,6 +31,28 @@ body {
   position:relative;
   padding-bottom:80px;
 }
+.hamburger {
+  position: fixed;
+  top:25px;
+  right:25px;
+  z-index: 90;
+  display: none;
+}
+
+/* on mobile I want to show the hamburger button by setting display to block */
+@media only screen and (max-width:768px){
+  .hamburger{
+    display:block;
+  }
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height:3px;
+  background-color: white;
+  margin:2px 0;
+}
 
 /******************************************
 /* LAYOUT
@@ -126,6 +148,19 @@ li {
 	 float: right;
      display: block;
      text-align:center;
+}
+@media only screen and (max-width:767px){
+	.nav-links, .nav-container{
+		float:none;
+		padding-left: 7px;
+	}
+	li{
+		float:none;
+		text-align:left;
+	}
+	.nav-links{
+		display:none;
+	}
 }
 
 a.nav:link,
